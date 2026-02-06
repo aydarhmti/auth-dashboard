@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <img id="logo" src="./assets/icon/login.svg" />
+      <h4>ورود به حساب کاربری</h4>
+      <form id="form" novalidate>
+        <div class="form-item">
+          <label class="text-lable" id="userLabel">نام کاربری</label>
+          <input
+            type="text"
+            class="input"
+            id="username"
+            placeholder="شماره همراه خود را وارد کنید"
+          />
+          <div class="error-message" id="userError">
+            <span>!لطفاً نام کاربری را وارد کنید</span>
+          </div>
+        </div>
+
+        <div class="form-item">
+          <label class="text-lable" id="passLabel">رمز عبور</label>
+          <div class="password-box">
+            <input
+              type="password"
+              class="input"
+              id="password"
+              placeholder="رمز عبور خود را وارد کنید"
+            />
+            <img
+              id="eye-icon"
+              class="eye-icon"
+              src="./assets/icon/eye-closed.svg"
+            />
+          </div>
+          <div class="error-message" id="passError">
+            <span>!لطفاً رمز عبور را وارد کنید</span>
+          </div>
+        </div>
+
+        <button type="submit" id="button">ورود</button>
+      </form>
+    </div>
+  </body>
+</html>

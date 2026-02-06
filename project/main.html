@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./assets/icon/login.png" />
+    <title>doshboard</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="details">
+        <div class="header">
+          <div class="exit">
+            <p class="exit-text">خروج از حساب</p>
+            <img src="./assets/icon/logout.png" class="profile-icon" />
+          </div>
+          <div class="profile">
+            <p class="exit-text">علی محمدی</p>
+            <img src="./assets/icon/people.jpg" class="profile-img" />
+          </div>
+        </div>
+
+        <div class="table-section">
+          <div class="table-background">
+            <div class="table-upsection">
+              <div class="search-section">
+                <form>
+                  <input
+                    type="text"
+                    id="searchinput"
+                    class="search-input"
+                    placeholder="جستجو بر اساس نام و نام خانوادگی"
+                  />
+                </form>
+              </div>
+              <div class="dashb">
+                <p class="profile-dash">داشبورد</p>
+              </div>
+            </div>
+
+            <div class="table-section-2">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>ردیف</th>
+                    <th>نام و نام خانوادگی</th>
+                    <th>تاریخ تولد</th>
+                    <th>سن</th>
+                    <th>موجودی حساب</th>
+                    <th>مدرک تحصیلی</th>
+                    <th>شماره حساب</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+              </table>
+              <div class="pagination" id="pagination">
+                <button class="pagination-btn prev-btn" id="prev-btn" title="صفحه قبلی">
+                  <svg
+                    class="arrow-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+
+                <div class="page-numbers" id="page-numbers"></div>
+                <button
+                  class="pagination-btn next-btn"
+                  id="next-btn"
+                  title="صفحه بعدی"
+                >
+                  <svg
+                    class="arrow-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dash-board">
+      <div class="logo-container">
+        <img class="logo-dashboard" src="./assets/icon/login.svg" />
+      </div>
+      <div class="option-container">
+        <div class="dashboard-options">
+          <p class="profile-text">داشبورد</p>
+          <img src="./assets/icon/dashboard.png" />
+        </div>
+        <div class="dashboard-options">
+          <p class="profile-text">حساب های مالی</p>
+          <img src="./assets/icon/wallet.png" />
+        </div>
+        <div class="dashboard-options">
+          <p class="profile-text">شماره کارت</p>
+          <img src="./assets/icon/card.png" />
+        </div>
+        <div class="dashboard-options">
+          <p class="profile-text">مجموع تراکنش ها</p>
+          <img src="./assets/icon/report.png" />
+        </div>
+        <div class="dashboard-options">
+          <p class="profile-text">گزارش مانده حساب</p>
+          <img src="./assets/icon/balance.png" />
+        </div>
+      </div>
+    </div>
+
+    <div id="cardModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-modal">&times;</span>
+          <h3 class="modal-title">شماره حساب‌ها</h3>
+        </div>
+        <div class="modal-body">
+          <div class="card-list">
+            <div class="card-item" data-card="5892101212345678">
+              <span class="card-icon">💳</span>
+              <span class="card-number">5892 1012 1234 5678</span>
+              <button class="copy-btn" title="کپی کردن">📋</button>
+            </div>
+            <div class="card-item" data-card="6037991234567890">
+              <span class="card-icon">💳</span>
+              <span class="card-number">6037 9912 3456 7890</span>
+              <button class="copy-btn" title="کپی کردن">📋</button>
+            </div>
+            <div class="card-item" data-card="5022291011121314">
+              <span class="card-icon">💳</span>
+              <span class="card-number">5022 2910 1112 1314</span>
+              <button class="copy-btn" title="کپی کردن">📋</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="confirmModal" class="confirm-btn">تایید</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

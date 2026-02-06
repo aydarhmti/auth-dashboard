@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Modak";
+  src: url("../font/Modak/Modak-Regular.ttf") format("truetype");
+  font-weight: bold;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #bdee894d;
+  text-align: right;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+.fade-out {
+  opacity: 0;
+}
+
+section {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Logo-animation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-direction: column;
+  min-height: 350px;
+  transform: rotate(56deg);
+}
+
+.orbit {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  animation: orbit-rotate 4s ease-in-out forwards;
+}
+
+.circle-1 {
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #002800;
+  top: 307px;
+  left: 92px;
+  transform: translateX(-50%);
+  box-shadow: 1px 7px 16px #002806;
+  animation: color-shift 4s ease-in-out forwards;
+}
+
+.ovel-2,
+.ovel-3,
+.ovel-4,
+.ovel-5,
+.ovel-6 {
+  height: 62px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  border: 2px solid #002800;
+  box-shadow: 11px 14px 3px #002800;
+}
+
+.ovel-2 {
+  width: 180px;
+}
+.ovel-3 {
+  width: 280px;
+}
+.ovel-4 {
+  width: 350px;
+}
+.ovel-5 {
+  width: 280px;
+}
+
+.ovel-6 {
+  width: 133px;
+  position: relative;
+  left: 18px;
+  z-index: 9;
+}
+
+.text-splash {
+  margin-top: 17px;
+  font-family: "Modak";
+  font-size: 40px;
+  font-weight: 700;
+  color: #002800;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: showText 1s ease forwards;
+  animation-delay: 4s;
+  text-shadow: 5px 9px 13px #001400;
+}
+
+@keyframes orbit-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes showText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
