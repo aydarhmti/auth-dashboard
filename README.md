@@ -1,2 +1,2 @@
 # auth-dashboard
-Collaborative academic frontend project developed as a team
+This project was developed as a team as part of a university course
